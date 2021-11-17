@@ -3,7 +3,7 @@
     <div class="py-3">
       <div class="display-1 mb-3">General Settings</div>
       <v-alert
-        dense
+        dense 
         text
         color="primary"
         type="info"
