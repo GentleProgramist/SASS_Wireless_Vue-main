@@ -11,7 +11,7 @@
         <div style="color: black;">
           <div class="d-flex justify-space-between mb-1">
             <div class="font-weight-bold">KORE Wireless Terms of Service</div>
-            <v-btn text color="primary">Accept</v-btn>
+            <v-btn text color="primary">Accept</v-btn> 
           </div>
           Unless otherwise agreed with KORE Wireless, your organization's use of and acacess to the Products is subject to KORE Wireless's <a href="https://shop.korewireless.com/pages/terms-and-conditions" target="blank">terms of service</a>. By continuing to use the Products, you agree to these terms on behalf of your organization and warrant that you have the authority to do so.
         </div>
