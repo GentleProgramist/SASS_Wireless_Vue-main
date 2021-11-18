@@ -6,10 +6,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getCompanyAdmins()
+  *    getCompanyAdmins()
   */
   getCompanyAdmins() {
-    return api.get('/companies/admins')
+   return api.get('/companies/admins')
   },
 
   /**
@@ -18,10 +18,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getCompanies()
+  *    getCompanies()
   */
   getCompanies() {
-    return api.get('/companies')
+   return api.get('/companies')
   },
 
   /**
@@ -30,10 +30,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getCompany()
+  *    getCompany()
   */
   getCompany(id) {
-    return api.get(`/companies/${id}`)
+   return api.get(`/companies/${id}`)
   },
 
   /**
@@ -42,12 +42,12 @@ export default {
   * @param {Object}
   * @example
   *
-  *     createCompany({
-  *       name: 'Company Name'
-  *     })
+  *    createCompany({
+  *     name: 'Company Name'
+  *    })
   */
   createCompany(payload) {
-    return api.post('/companies', payload)
+   return api.post('/companies', payload)
   },
 
   /**
@@ -56,12 +56,12 @@ export default {
   * @param {Object}
   * @example
   *
-  *     updateCompany({
-  *       name: 'Company Name'
-  *     })
+  *    updateCompany({
+  *     name: 'Company Name'
+  *    })
   */
   updateCompany(payload) {
-    return api.put(`/companies/${payload.id}`, payload)
+   return api.put(`/companies/${payload.id}`, payload)
   },
 
   /**
@@ -70,14 +70,14 @@ export default {
   * @param {Object}
   */
   uploadLogo(data) {
-    return api.post('/companies/upload-logo', data)
+   return api.post('/companies/upload-logo', data)
   },
 
   createCustomerWithDevices(payload) {
-    return api.post('/companies/create-with-devices', payload)
+   return api.post('/companies/create-with-devices', payload)
   },
 
   updateCustomerWithDevices(payload) {
-    return api.post('/companies/update-with-devices', payload)
+   return api.post('/companies/update-with-devices', payload)
   }
 }

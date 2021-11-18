@@ -25,7 +25,7 @@ export const routes = [{
   name: 'error',
   component: () => import(/* webpackChunkName: "error" */ '@/pages/error/NotFoundPage.vue'),
   meta: {
-    layout: 'error'
+   layout: 'error'
   }
 }]
 
@@ -33,9 +33,9 @@ const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL || '/',
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) return savedPosition
+   if (savedPosition) return savedPosition
 
-    return { x: 0, y: 0 }
+   return { x: 0, y: 0 }
   },
   routes
 })
@@ -47,51 +47,51 @@ let firstRoute = true
  */
 router.beforeEach(async (to, from, next) => {
   if (firstRoute) {
-    firstRoute = false
+   firstRoute = false
 
-    await bootstrap()
+   await bootstrap()
   }
 
   const { roleId } = store.state.auth.user
 
   const requiresAuth =
-    (to.matched.some((record) => record.meta.superAdmin)) ||
-    (to.matched.some((record) => record.meta.userAuth)) ||
-    (to.matched.some((record) => record.meta.koreAdmin)) ||
-    (to.matched.some((record) => record.meta.customerAdmin))
+   (to.matched.some((record) => record.meta.superAdmin)) ||
+   (to.matched.some((record) => record.meta.userAuth)) ||
+   (to.matched.some((record) => record.meta.koreAdmin)) ||
+   (to.matched.some((record) => record.meta.customerAdmin))
 
   if (requiresAuth) {
-    if (roleId) {
-      if (to.matched.some((record) => record.meta.userAuth)) {
-        return next()
-      } else if (roleId !== 'kore_admin' && to.matched.some((record) => record.meta.userAuth)) {
-        return next({
-          name: 'auth-signin'
-        })
-      } else if (roleId !== 'customer_admin' && to.matched.some((record) => record.meta.userAuth)) {
-        return next({
-          name: 'auth-signin'
-        })
-      }
-
+   if (roleId) {
+    if (to.matched.some((record) => record.meta.userAuth)) {
       return next()
-    } else {
+    } else if (roleId !== 'kore_admin' && to.matched.some((record) => record.meta.userAuth)) {
       return next({
-        name: 'auth-signin'
+       name: 'auth-signin'
+      })
+    } else if (roleId !== 'customer_admin' && to.matched.some((record) => record.meta.userAuth)) {
+      return next({
+       name: 'auth-signin'
       })
     }
+
+    return next()
+   } else {
+    return next({
+      name: 'auth-signin'
+    })
+   }
   } else {
-    if (roleId && (to.matched.some((record) => record.meta.userNotAuth))) {
-      if (roleId === 'kore_admin') {
-        return next({
-          name: 'acs-machines'
-        })
-      } else if (roleId === 'customer_admin' && roleId === 'customer_manager' || roleId === 'customer_operator') {
-        return next({
-          name: 'dashboard-analytics'
-        })
-      }
+   if (roleId && (to.matched.some((record) => record.meta.userNotAuth))) {
+    if (roleId === 'kore_admin') {
+      return next({
+       name: 'acs-machines'
+      })
+    } else if (roleId === 'customer_admin' && roleId === 'customer_manager' || roleId === 'customer_operator') {
+      return next({
+       name: 'dashboard-analytics'
+      })
     }
+   }
   }
 
   return next()

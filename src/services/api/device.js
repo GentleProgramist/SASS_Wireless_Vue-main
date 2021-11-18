@@ -6,9 +6,9 @@ export default {
   * @param {}
   * @example
   *
-  *     getDevices()
+  *    getDevices()
   */
   getDevices(routerId) {
-    return api.get(`/devices?routerId=${routerId}`)
+   return api.get(`/devices?routerId=${routerId}`)
   }
 }

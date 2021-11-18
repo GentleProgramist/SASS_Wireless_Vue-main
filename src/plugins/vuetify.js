@@ -22,12 +22,12 @@ Vue.use(Vuetify, {
 export default new Vuetify({
   rtl: config.theme.isRTL,
   theme: {
-    options: {
-      customProperties: true
-    },
-    themes: {
-      dark: config.theme.dark,
-      light: config.theme.light
-    }
+   options: {
+    customProperties: true
+   },
+   themes: {
+    dark: config.theme.dark,
+    light: config.theme.light
+   }
   }
 })

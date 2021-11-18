@@ -8,8 +8,8 @@ import navigation from './navigation'
 export default {
   // product display information
   product: {
-    name: 'KORE Group',
-    version: '1.0.0'
+   name: 'KORE Group',
+   version: '1.0.0'
   },
 
   // google maps

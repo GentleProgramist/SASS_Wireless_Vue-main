@@ -20,45 +20,45 @@ export function formatCurrency(value, currency) {
 */
 export function formatPrice(price, currency) {
   try {
-    const numberFormatted = numberFormat(
-      price,
-      currency.decimalDigits,
-      currency.decimalSeparator,
-      currency.thousandsSeparator
-    )
+   const numberFormatted = numberFormat(
+    price,
+    currency.decimalDigits,
+    currency.decimalSeparator,
+    currency.thousandsSeparator
+   )
 
-    if (currency.currencySymbol) {
-      const priceSeparator = currency.currencySymbolNumberOfSpaces > 0
-        ? ' '.repeat(currency.currencySymbolNumberOfSpaces)
-        : ''
-      let priceParts = [numberFormatted, priceSeparator, currency.currencySymbol]
+   if (currency.currencySymbol) {
+    const priceSeparator = currency.currencySymbolNumberOfSpaces > 0
+      ? ' '.repeat(currency.currencySymbolNumberOfSpaces)
+      : ''
+    let priceParts = [numberFormatted, priceSeparator, currency.currencySymbol]
 
-      if (currency.currencySymbolPosition === 'left') {
-        priceParts = priceParts.reverse()
-      }
-
-      return priceParts.join('')
-    } else {
-      return numberFormatted
+    if (currency.currencySymbolPosition === 'left') {
+      priceParts = priceParts.reverse()
     }
+
+    return priceParts.join('')
+   } else {
+    return numberFormatted
+   }
   } catch (e) {
-    return price
+   return price
   }
 }
 
 /**
-   * Helper method to format a number given a few configurations such as the separation
-   * between thousands and decimals
-   *
-   * @param number
-   * @param decimals
-   * @param dec_point
-   * @param thousands_sep
-   * @returns {*}
-   */
+  * Helper method to format a number given a few configurations such as the separation
+  * between thousands and decimals
+  *
+  * @param number
+  * @param decimals
+  * @param dec_point
+  * @param thousands_sep
+  * @returns {*}
+  */
 export function numberFormat(number, decimals, dec_point, thousands_sep) {
   if (isNaN(number)) {
-    return number
+   return number
   }
 
   const negative = number < 0
@@ -69,7 +69,7 @@ export function numberFormat(number, decimals, dec_point, thousands_sep) {
   const parts = []
 
   for (let i = str[0].length; i > 0; i -= 3) {
-    parts.unshift(str[0].substring(Math.max(0, i - 3), i))
+   parts.unshift(str[0].substring(Math.max(0, i - 3), i))
   }
 
   str[0] = parts.join(thousands_sep ? thousands_sep : ',')

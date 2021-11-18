@@ -11,9 +11,9 @@ const { key } = config.maps
  */
 Vue.use(VueGoogleMaps, {
   load: {
-    // REPLACE key on configs/maps.js
-    key,
-    libraries: 'places' // This is required if you use the Autocomplete plugin
+   // REPLACE key on configs/maps.js
+   key,
+   libraries: 'places' // This is required if you use the Autocomplete plugin
   },
   installComponents: true
 })

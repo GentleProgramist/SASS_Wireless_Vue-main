@@ -18,14 +18,14 @@ Vue.use(Vuex)
  */
 const store = new Vuex.Store({
   modules: {
-    app: AppModule,
-    auth,
-    users,
-    customers,
-    cities,
-    devices,
-    routers,
-    bytesUsage
+   app: AppModule,
+   auth,
+   users,
+   customers,
+   cities,
+   devices,
+   routers,
+   bytesUsage
   }
 })
 

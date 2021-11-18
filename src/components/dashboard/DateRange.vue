@@ -1,27 +1,27 @@
 <template>
   <div>
-    <v-dialog
-      v-model="menu"
-      :close-on-content-click="false"
-      width="500"
-      offset-y
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          color="primary"
-          text
-          v-bind="attrs"
-          v-on="on"
-          @click="initOption"
-        >
-          <v-icon left>mdi-clock</v-icon>
-          {{ optionLabel }}
-        </v-btn>
-      </template>
-      <v-card class="pt-4">
-        <v-card-text>
-          <v-chip-group
-            id="date-range-options"
+   <v-dialog
+    v-model="menu"
+    :close-on-content-click="false"
+    width="500"
+    offset-y
+   >
+    <template v-slot:activator="{ on, attrs }">
+      <v-btn
+       color="primary"
+       text
+       v-bind="attrs"
+       v-on="on"
+       @click="initOption"
+      >
+       <v-icon left>mdi-clock</v-icon>
+       {{ optionLabel }}
+      </v-btn>
+    </template>
+    <v-card class="pt-4">
+      <v-card-text>
+       <v-chip-group
+         id="date-range-options"
             v-model="locOptionId"
             color="primary"
           >

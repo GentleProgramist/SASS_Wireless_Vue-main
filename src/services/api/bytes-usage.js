@@ -6,13 +6,13 @@ export default {
   * @param {}
   * @example
   *
-  *     getBytesUsage()
+  *    getBytesUsage()
   */
   getBytesUsage({ routerId, timeTo, timeFrom }) {
-    return api.get(`/bytes-usage/${routerId}`, { 
-      params: { 
-        'timeTo': timeTo, 'timeFrom': timeFrom 
-      } 
-    })
+   return api.get(`/bytes-usage/${routerId}`, { 
+    params: { 
+      'timeTo': timeTo, 'timeFrom': timeFrom 
+    } 
+   })
   }
 }

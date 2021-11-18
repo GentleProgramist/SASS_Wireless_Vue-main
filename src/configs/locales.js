@@ -14,34 +14,34 @@ export default {
 
   // availabled locales for user selection
   availableLocales: [{
-    code: 'en',
-    flag: 'us',
-    label: 'English',
-    messages: en
+   code: 'en',
+   flag: 'us',
+   label: 'English',
+   messages: en
   }, {
-    code: 'es',
-    flag: 'es',
-    label: 'Español',
-    messages: es
+   code: 'es',
+   flag: 'es',
+   label: 'Español',
+   messages: es
   }, {
-    code: 'pt',
-    flag: 'pt',
-    label: 'Português',
-    messages: pt
+   code: 'pt',
+   flag: 'pt',
+   label: 'Português',
+   messages: pt
   }, {
-    code: 'de',
-    flag: 'de',
-    label: 'Deutsche',
-    messages: de
+   code: 'de',
+   flag: 'de',
+   label: 'Deutsche',
+   messages: de
   }, {
-    code: 'fr',
-    flag: 'fr',
-    label: 'Français',
-    messages: fr
+   code: 'fr',
+   flag: 'fr',
+   label: 'Français',
+   messages: fr
   }, {
-    code: 'ar',
-    flag: 'sa',
-    label: 'العربية',
-    messages: ar
+   code: 'ar',
+   flag: 'sa',
+   label: 'العربية',
+   messages: ar
   }]
 }

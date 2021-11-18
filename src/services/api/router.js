@@ -6,10 +6,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getRouters()
+  *    getRouters()
   */
   getRouters() {
-    return api.get('/routers')
+   return api.get('/routers')
   },
 
   /**
@@ -18,13 +18,13 @@ export default {
   * @param {Object}
   * @example
   *
-  *     assignCompany({
-  *       routerId: 1,
-  *       companyId: 2
-  *     })
+  *    assignCompany({
+  *     routerId: 1,
+  *     companyId: 2
+  *    })
   */
   assignCompany(payload) {
-    return api.post('/routers/assign-company', payload)
+   return api.post('/routers/assign-company', payload)
   },
   
   /**
@@ -33,11 +33,11 @@ export default {
   * @param {Object}
   * @example
   *
-  *     updateRouter({
-  *       customerAssignedName: 'New Device Name'
-  *     })
+  *    updateRouter({
+  *     customerAssignedName: 'New Device Name'
+  *    })
   */
   updateRouter(payload) {
-    return api.put(`/routers/${payload.id}`, payload)
+   return api.put(`/routers/${payload.id}`, payload)
   }
 }

@@ -7,17 +7,17 @@ export default {
   * @param {string} password
   * @example
   *
-  *     signIn('almesri@machinecdn.com', 'password')
+  *    signIn('almesri@machinecdn.com', 'password')
   */
   signIn(email, password) {
-    const data = {
-      email,
-      password
-    }
+   const data = {
+    email,
+    password
+   }
 
-    return api.post('/auth/signin', data).then((response) => {
-      return response
-    })
+   return api.post('/auth/signin', data).then((response) => {
+    return response
+   })
   },
 
   /**
@@ -27,17 +27,17 @@ export default {
   * @param {string} newPassword
   * @example
   *
-  *     updatePassword('password', 'PASSWORD')
+  *    updatePassword('password', 'PASSWORD')
   */
   updatePassword(currentPassword, newPassword) {
-    const data = {
-      current_password: currentPassword,
-      new_password: newPassword
-    }
+   const data = {
+    current_password: currentPassword,
+    new_password: newPassword
+   }
 
-    return api.post('/auth/update-password', data).then((response) => {
-      return response
-    })
+   return api.post('/auth/update-password', data).then((response) => {
+    return response
+   })
   },
 
   /**
@@ -46,16 +46,16 @@ export default {
   * @param {string} email
   * @example
   *
-  *     requestForgotPassword('almesri@machinecdn.com')
+  *    requestForgotPassword('almesri@machinecdn.com')
   */
   requestForgotPassword(email) {
-    const data = {
-      email: email
-    }
+   const data = {
+    email: email
+   }
 
-    return api.post('/auth/password-reset', data).then((response) => {
-      return response
-    })
+   return api.post('/auth/password-reset', data).then((response) => {
+    return response
+   })
   },
 
   /**
@@ -63,12 +63,12 @@ export default {
   *
   * @example
   *
-  *     signOut()
+  *    signOut()
   */
   signOut() {
-    return api.get('/auth/logout').then((response) => {
-      return response
-    })
+   return api.get('/auth/logout').then((response) => {
+    return response
+   })
   },
 
   /**
@@ -76,11 +76,11 @@ export default {
   *
   * @example
   *
-  *     check()
+  *    check()
   */
   check() {
-    return api.get('/auth/me').then((response) => {
-      return response
-    })
+   return api.get('/auth/me').then((response) => {
+    return response
+   })
   }
 }

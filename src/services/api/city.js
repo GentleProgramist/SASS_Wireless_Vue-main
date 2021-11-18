@@ -6,11 +6,11 @@ export default {
   * @param {}
   * @example
   *
-  *     getCities('Alabama')
+  *    getCities('Alabama')
   */
   getCities(state) {
-    return api.get('/cities/' + state).then((response) => {
-      return response
-    })
+   return api.get('/cities/' + state).then((response) => {
+    return response
+   })
   }
 }

@@ -29,11 +29,11 @@ const state = {
 
   // App.vue main toast
   toast: {
-    show: false,
-    icon: '',
-    color: 'black',
-    message: '',
-    timeout: 3000
+   show: false,
+   icon: '',
+   color: 'black',
+   message: '',
+   timeout: 3000
   }
 }
 

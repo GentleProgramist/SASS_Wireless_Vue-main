@@ -6,10 +6,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getKoreUsers()
+  *    getKoreUsers()
   */
   getKoreUsers() {
-    return api.get('/users/kore-users')
+   return api.get('/users/kore-users')
   },
 
   /**
@@ -18,10 +18,10 @@ export default {
   * @param {}
   * @example
   *
-  *     getKoreUsers()
+  *    getKoreUsers()
   */
   getCompanyUsers() {
-    return api.get('/users/company-users')
+   return api.get('/users/company-users')
   },
 
   /**
@@ -30,10 +30,10 @@ export default {
   * @param {number}
   * @example
   *
-  *     openEditUser(2)
+  *    openEditUser(2)
   */
   openEditUser(id) {
-    return api.get(`/users/${id}/edit`)
+   return api.get(`/users/${id}/edit`)
   },
 
   /**
@@ -42,10 +42,10 @@ export default {
   * @param {Object} user object for a new user
   * @example
   *
-  *     addUser(user)
+  *    addUser(user)
   */
   addUser(data) {
-    return api.post('/users', data)
+   return api.post('/users', data)
   },
 
   /**
@@ -54,9 +54,9 @@ export default {
   * @param {Object} user object
   * @example
   *
-  *     updateUserAccount(user)
+  *    updateUserAccount(user)
   */
   updateUserAccount(data) {
-    return api.put(`/users/${data.id}`, data)
+   return api.put(`/users/${data.id}`, data)
   }
 }

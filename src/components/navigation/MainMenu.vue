@@ -1,9 +1,9 @@
 <template>
   <v-list nav dense>
-    <div v-for="(item, index) in menu" :key="index">
-      <div v-if="item.text" class="pa-1 mt-2 overline">{{ item.text }}</div>
-      <nav-menu :menu="item.items" />
-    </div>
+   <div v-for="(item, index) in menu" :key="index">
+    <div v-if="item.text" class="pa-1 mt-2 overline">{{ item.text }}</div>
+    <nav-menu :menu="item.items" />
+   </div>
   </v-list>
 </template>
 
@@ -12,13 +12,13 @@ import NavMenu from './NavMenu'
 
 export default {
   components: {
-    NavMenu
+   NavMenu
   },
   props: {
-    menu: {
-      type: Array,
-      default: () => []
-    }
+   menu: {
+    type: Array,
+    default: () => []
+   }
   }
 }
 </script>

@@ -6,8 +6,8 @@ Vue.filter('formatPhoneNumber', (value) => {
   const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 
   if (phoneRegex.test(subjectString)) {
-	    return subjectString.replace(phoneRegex, '($1) $2-$3')
+	   return subjectString.replace(phoneRegex, '($1) $2-$3')
   } else {
-	    return 'Invalid'
+	   return 'Invalid'
   }
 })

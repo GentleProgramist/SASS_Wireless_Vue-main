@@ -26,8 +26,8 @@
 .v-application--is-rtl {
   .v-list-item__action:first-child,
   .v-list-item__icon:first-child {
-    margin-right: 0 !important;
-    margin-left: 14px !important;
+   margin-right: 0 !important;
+   margin-left: 14px !important;
   }
 }
 
@@ -60,27 +60,27 @@
 // Tables
 .v-data-table {
   table {
-    padding: 4px;
-    padding-bottom: 8px;
+   padding: 4px;
+   padding-bottom: 8px;
 
-    th {
-      text-transform: uppercase;
-    }
+   th {
+    text-transform: uppercase;
+   }
 
-    td {
-      border-bottom: 0 !important;
-    }
+   td {
+    border-bottom: 0 !important;
+   }
 
-    tbody {
-      tr {
-        transition: box-shadow 0.2s, transform 0.2s;
+   tbody {
+    tr {
+      transition: box-shadow 0.2s, transform 0.2s;
 
-        &:not(.v-data-table__selected):hover {
-          box-shadow: 0 3px 15px -2px rgba(0, 0, 0, 0.12);
-          transform: translateY(-4px);
-        }
+      &:not(.v-data-table__selected):hover {
+       box-shadow: 0 3px 15px -2px rgba(0, 0, 0, 0.12);
+       transform: translateY(-4px);
       }
     }
+   }
   }
 }
 

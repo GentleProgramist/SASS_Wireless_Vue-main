@@ -7,7 +7,7 @@ Sentry.init({
   dsn: 'https://3b9791a8547949d89f696bffb6ab47ee@o500701.ingest.sentry.io/5580915',
   autoSessionTracking: true,
   integrations: [
-    new Integrations.BrowserTracing()
+   new Integrations.BrowserTracing()
   ],
 
   tracesSampleRate: 1.0,
