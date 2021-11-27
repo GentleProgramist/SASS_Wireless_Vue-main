@@ -1,5 +1,6 @@
 <template>
   <div class="d-flex flex-column flex-grow-1">
+<<<<<<< HEAD
    <div class="py-3">
     <div class="display-1 mb-3">General Settings</div>
     <v-alert
@@ -17,6 +18,49 @@
       </div>
     </v-alert>
    </div>
+=======
+    <div class="py-3">
+      <div class="display-1 mb-3">General Settings</div>
+      <v-alert
+        dense 
+        text
+        color="primary"
+        type="info"
+      >
+        <div style="color: black;">
+          <div class="d-flex justify-space-between mb-1">
+            <div class="font-weight-bold">KORE Wireless Terms of Service</div>
+            <v-btn text color="primary">Accept</v-btn> 
+          </div>
+          Unless otherwise agreed with KORE Wireless, your organization's use of and acacess to the Products is subject to KORE Wireless's <a href="https://shop.korewireless.com/pages/terms-and-conditions" target="blank">terms of service</a>. By continuing to use the Products, you agree to these terms on behalf of your organization and warrant that you have the authority to do so.
+        </div>
+      </v-alert>
+    </div>
+ 
+    <v-row dense>
+      <v-col cols="12" md="4">
+        <div class="text-h5">Organization Information</div>
+      </v-col>
+      <v-col cols="12" md="8">
+        <v-card v-if="company" outlined width="500">
+          <v-card-text>
+            <div class="d-flex justify-space-between align-center">
+              <div class="title">Organization Name</div>
+              <v-btn
+                text
+                color="primary"
+                @click="openNameDialog"
+              >
+                <v-icon left>
+                  mdi-pencil
+                </v-icon>
+                Edit
+              </v-btn>
+            </div>
+            <div class="subtitle-1">{{ company.name }}</div>
+          </v-card-text>
+        </v-card>
+>>>>>>> 68f1513e0202e8cc357b489ca8347af13d5946c2
 
    <v-row dense>
     <v-col cols="12" md="4">
